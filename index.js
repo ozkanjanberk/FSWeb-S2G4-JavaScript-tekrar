@@ -147,7 +147,15 @@ sayilar.forEach(item => {
   sayac[item] = (sayac[item] || 0) + 1;
 });
 
-console.log(sayac);
+//console.log(sayac);
+
+let result = Object.entries(sayac);
+
+for (let i=0; i<result.length; i++) {
+if (result[i][1] > 1) {
+tekraredensayilar.push(`${result[i][0]} sayısı ${result[i][1]} kere tekrar edilmiştir`)
+}
+}
 
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
